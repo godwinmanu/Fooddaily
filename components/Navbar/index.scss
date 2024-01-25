@@ -1,0 +1,53 @@
+$mainColor: #fd393b;
+
+nav {
+  padding: 2% 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    span:nth-child(2) {
+      color: $mainColor;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    gap: 25px;
+
+    li {
+      width: 100%;
+
+      a {
+        width: 100%;
+        font-weight: bold;
+
+        &.active {
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            right: 45%;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: $mainColor;
+          }
+        }
+      }
+    }
+  }
+
+  .user-stuff {
+    display: flex;
+    gap: 20px;
+  }
+}
