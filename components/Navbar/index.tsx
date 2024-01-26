@@ -4,6 +4,7 @@ import Link from "next/link";
 import "./index.scss";
 import { ShoppingCart, User } from "lucide-react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const menuLinks = [
   {

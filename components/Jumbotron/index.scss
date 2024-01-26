@@ -1,0 +1,42 @@
+@import "../../styles/common.scss";
+
+.jumbotron {
+  padding: 2rem 0rem;
+  display: flex;
+  gap: 20px;
+
+  .jumbotron-text {
+    width: 70%;
+    // border: 1px solid rgb(62, 63, 62);
+
+    h1 {
+      color: #1e2133;
+      font-size: 3rem;
+      font-weight: bold;
+      line-height: 4rem;
+    }
+
+    p {
+      padding: 1rem 0rem;
+      color: #1e2133;
+    }
+
+    button {
+      @include buttonStyle(10px, 10px, 5px);
+      width: 100%;
+    }
+  }
+  .exhibition-image {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    // border: 1px solid black;
+
+    img {
+      // border: 1px solid rgb(62, 63, 62);
+      height: 100%;
+      translate: 0px -20px;
+    }
+  }
+}

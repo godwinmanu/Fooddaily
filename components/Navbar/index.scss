@@ -1,14 +1,17 @@
 @import "../../styles/common.scss";
 
 nav {
-  padding: 2% 7%;
+  @include x-gutter;
+  padding-top: 2%;
+  padding-bottom: 2%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 
   .brand-name {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
 
     span:nth-child(2) {
@@ -26,7 +29,7 @@ nav {
 
       a {
         width: 100%;
-        font-weight: bold;
+        font-weight: 500;
 
         &.active {
           position: relative;

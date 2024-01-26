@@ -1,7 +1,7 @@
 import "./index.scss";
 
 const Statistics = () => {
-  return <Statistics>Statistics</Statistics>;
+  return <div>Statistics</div>;
 };
 
 export default Statistics;

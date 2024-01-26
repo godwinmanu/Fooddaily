@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ========== Reset CSS ================ */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -41,4 +42,23 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+/* ====================== Global styles ================== */
+
+html {
+  background-image: linear-gradient(
+    120deg,
+    hsl(0deg 100% 98%) 0%,
+    hsl(0deg 100% 98%) 7%,
+    hsl(0deg 100% 98%) 15%,
+    hsl(0deg 100% 98%) 22%,
+    hsl(0deg 100% 99%) 30%,
+    hsl(0deg 100% 99%) 37%,
+    hsl(0deg 100% 99%) 45%,
+    hsl(0deg 100% 99%) 52%,
+    hsl(0deg 100% 100%) 61%,
+    hsl(0deg 100% 100%) 71%,
+    hsl(0deg 0% 100%) 89%
+  );
 }
