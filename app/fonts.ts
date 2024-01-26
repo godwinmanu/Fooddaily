@@ -1,28 +1,20 @@
 import localFont from "next/font/local";
 
-const lato = localFont({
+const Gordita = localFont({
   src: [
     {
-      path: "../public/fonts/Lato/Lato-Regular.ttf",
+      path: "../public/fonts/Gordita-Regular.otf",
       weight: "400",
-      style: "normal",
     },
     {
-      path: "../public/fonts/Lato/Lato-Italic.ttf",
-      weight: "400",
-      style: "italic",
+      path: "../public/fonts/Gordita-Medium.otf",
+      weight: "500",
     },
     {
-      path: "../public/fonts/Lato/Lato-Bold.ttf",
+      path: "../public/fonts/Gordita-Bold.otf",
       weight: "700",
-      style: "italic",
-    },
-    {
-      path: "../public/fonts/Lato/Lato-BoldItalic.ttf",
-      weight: "700",
-      style: "italic",
     },
   ],
 });
 
-export default lato;
+export default Gordita;
