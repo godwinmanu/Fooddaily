@@ -1,0 +1,82 @@
+@import "../../styles/common.scss";
+
+.top-foods {
+  h1 {
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .top-foods-box {
+    padding: 7rem 1.5rem;
+    // background: radial-gradient(rgb(243, 172, 39), $mainColor);
+    background-color: $mainColor;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 100px;
+
+    .top-food-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 200px;
+      position: relative;
+      background-color: white;
+      padding: 10px;
+      padding-top: 90px;
+      border-radius: 10px;
+      translate: 0px 80px;
+
+      &:nth-child(2) {
+        translate: 0px -10px;
+      }
+
+      img {
+        border-radius: 50%;
+        position: absolute;
+        top: -80px;
+      }
+
+      .food-name {
+        font-weight: 500;
+        text-align: center;
+      }
+
+      .food-stats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        small {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+        }
+      }
+
+      .food-price {
+        text-align: center;
+        font-weight: 500;
+
+        span:nth-child(2) {
+          font-size: 1.3em;
+          color: $mainColor;
+        }
+      }
+
+      button {
+        @include buttonStyle(5px, 5px, 5px);
+        width: 100%;
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+    }
+  }
+}

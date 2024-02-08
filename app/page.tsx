@@ -1,12 +1,16 @@
 import "./home.scss";
 import Jumbotron from "@/components/Jumbotron";
-import Statistics from "@/components/Statistics";
+import ServiceQualification from "@/components/ServiceQualification";
+import Testimonies from "@/components/Testimonies";
+import TopFoods from "@/components/TopFoods";
 
 export default function Home() {
   return (
     <main className="">
       <Jumbotron />
-      <Statistics />
+      <ServiceQualification />
+      <TopFoods />
+      <Testimonies />
     </main>
   );
 }

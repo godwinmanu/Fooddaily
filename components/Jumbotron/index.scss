@@ -9,11 +9,34 @@
     width: 70%;
     // border: 1px solid rgb(62, 63, 62);
 
+    .slogan {
+      display: flex;
+      gap: 7px;
+      width: fit-content;
+      padding: 5px 10px;
+      border-radius: 30px;
+      background-color: rgba($color: $mainColor, $alpha: 0.1);
+      margin-bottom: 20px;
+
+      .slogan-text {
+        color: $mainColor;
+        font-size: 11px;
+      }
+
+      .slogan-icon {
+        color: $mainColor;
+      }
+    }
+
     h1 {
       color: #1e2133;
       font-size: 3rem;
       font-weight: bold;
       line-height: 4rem;
+
+      span {
+        color: $mainColor;
+      }
     }
 
     p {
@@ -21,9 +44,67 @@
       color: #1e2133;
     }
 
-    button {
-      @include buttonStyle(10px, 10px, 5px);
-      width: 100%;
+    .call-to-actions {
+      display: flex;
+      gap: 40px;
+
+      button {
+        @include buttonStyle(10px, 10px, 5px);
+        width: 100%;
+        position: relative;
+      }
+
+      .order-btn {
+        &::before {
+          content: "";
+          background-color: $mainColor;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -10px;
+          width: 20px;
+          border-radius: 7px;
+        }
+
+        &::after {
+          content: "";
+          background-color: $mainColor;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: -15px;
+          width: 30px;
+          transform: skewX(-20deg);
+          border-radius: 7px;
+        }
+      }
+
+      .tracking-btn {
+        background-color: #1e2133;
+
+        &::before {
+          content: "";
+          background-color: #1e2133;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -15px;
+          width: 30px;
+          transform: skewX(-20deg);
+          border-radius: 7px;
+        }
+
+        &::after {
+          content: "";
+          background-color: #1e2133;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: -10px;
+          width: 20px;
+          border-radius: 7px;
+        }
+      }
     }
   }
   .exhibition-image {
@@ -31,12 +112,18 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    // border: 1px solid black;
 
-    img {
-      // border: 1px solid rgb(62, 63, 62);
-      height: 100%;
+    .image-box {
       translate: 0px -20px;
+      border: 2px solid #ecbdbd;
+      border-radius: 10px;
+      // background-color: #fceeee;
+      img {
+        // border: 1px solid rgb(62, 63, 62);
+        height: 100%;
+        translate: -20px 20px;
+        border-radius: 10px;
+      }
     }
   }
 }

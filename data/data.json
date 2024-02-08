@@ -1,0 +1,313 @@
+{
+  "qualifications": [
+    {
+      "title": "Easy to order",
+      "illustration": "/img/easy-order.svg",
+      "description": "You only need a few steps in ordering food"
+    },
+    {
+      "title": "Fastest delivery",
+      "illustration": "/img/fastest-delivery.svg",
+      "description": "Delivery that is always on time, even faster"
+    },
+    {
+      "title": "Best quality",
+      "illustration": "/img/best-quality.svg",
+      "description": "We deliver best foods in term of quality"
+    }
+  ],
+  "testimonies": [
+    {
+      "customerName": "John Doe",
+      "thoughts": "Fooddaily is the best. They are the fastest food delivery service in the town.I really recommend them. It's my first experience with online food ordering and I'm so satisfied.",
+      "rate": 5
+    },
+    {
+      "customerName": "Jane Doe",
+      "thoughts": "Not only they are fast but they also provide best foods in the town. Since I discover them, I can't keep myself to use their plateform to order foods anytime when I'm busy.",
+      "rate": 5
+    },
+    {
+      "customerName": "Customer Robert",
+      "thoughts": "Fooddaily is the best. They are the fastest food delivery service in the town.I really recommend them. It's my first experience with online food ordering and I'm so satisfied.",
+      "rate": 4.8
+    }
+  ],
+  "topFoods": [
+    {
+      "name": "Pizza-Burger.png",
+      "picture": "/img/foods/burgers/Pizza-Burger.png",
+      "price": 25,
+      "stars": 4,
+      "totalOrders": "12k"
+    },
+    {
+      "name": "Pepperoni-Pizza.jpg",
+      "picture": "/img/foods/pizza/Pepperoni-Pizza.jpg",
+      "price": 20,
+      "stars": 5,
+      "totalOrders": "25k"
+    },
+    {
+      "name": "Ramen.jpg",
+      "picture": "/img/foods/noodles/Ramen.jpg",
+      "price": 35,
+      "stars": 4,
+      "totalOrders": "10k"
+    }
+  ],
+  "menu": {
+    "Burger": [
+      {
+        "name": "Baguette-Burger.jpg",
+        "picture": "/img/foods/burgers/Baguette-Burger.jpg",
+        "price": 20
+      },
+      {
+        "name": "Cheeseburger.jpg",
+        "picture": "/img/foods/burgers/Cheeseburger.jpg",
+        "price": 15
+      },
+      {
+        "name": "Chicken-Burger.jpg",
+        "picture": "/img/foods/burgers/Chicken-Burger.jpg",
+        "price": 25
+      },
+      {
+        "name": "Chili-Burger.jpeg",
+        "picture": "/img/foods/burgers/Chili-Burger.jpeg",
+        "price": 20
+      },
+      {
+        "name": "Classic-Burger.png",
+        "picture": "/img/foods/burgers/Classic-Burger.png",
+        "price": 10
+      },
+      {
+        "name": "Elk-Burger.webp",
+        "picture": "/img/foods/burgers/Elk-Burger.webp",
+        "price": 30
+      },
+      {
+        "name": "Pizza-Burger.png",
+        "picture": "/img/foods/burgers/Pizza-Burger.png",
+        "price": 25
+      },
+      {
+        "name": "Veggie-Burger.web",
+        "picture": "/img/foods/burgers/Veggie-Burger.webp",
+        "price": 20
+      }
+    ],
+    "Pizza": [
+      {
+        "name": "Biga-Pizza.webp",
+        "picture": "/img/foods/pizza/Biga-Pizza.webp",
+        "price": 40
+      },
+      {
+        "name": "Buffalo-Pizza.jpg",
+        "picture": "/img/foods/pizza/Buffalo-Pizza.jpg",
+        "price": 20
+      },
+      {
+        "name": "California-Pizza.webp",
+        "picture": "/img/foods/pizza/California-Pizza.webp",
+        "price": 25
+      },
+      {
+        "name": "Cheese-Pizza.webp",
+        "picture": "/img/foods/pizza/Cheese-Pizza.webp",
+        "price": 20
+      },
+      {
+        "name": "Deep-Dish-Pizza.jpg",
+        "picture": "/img/foods/pizza/Deep-Dish-Pizza.jpg",
+        "price": 25
+      },
+      {
+        "name": "Dessert-Pizza.jpg",
+        "picture": "/img/foods/pizza/Dessert-Pizza.jpg",
+        "price": 15
+      },
+      {
+        "name": "Pepperoni-Pizza.jpg",
+        "picture": "/img/foods/pizza/Pepperoni-Pizza.jpg",
+        "price": 20
+      },
+      {
+        "name": "Roman-Style-Pizza.webp",
+        "picture": "/img/foods/pizza/Roman-Style-Pizza.webp",
+        "price": 30
+      }
+    ],
+    "Sandwich": [
+      {
+        "name": "Italian-Sandwich.jpg",
+        "picture": "/img/foods/sandwich/Italian-Sandwich.jpg",
+        "price": 30
+      },
+      {
+        "name": "Breakfast-Sandwich.webp",
+        "picture": "/img/foods/sandwich/Breakfast-Sandwich.webp",
+        "price": 20
+      },
+      {
+        "name": "Chicken-Sandwich.jpg",
+        "picture": "/img/foods/sandwich/Chicken-Sandwich.jpg",
+        "price": 25
+      },
+      {
+        "name": "Banh-mi.jpg",
+        "picture": "/img/foods/sandwich/Banh-mi.jpg",
+        "price": 40
+      },
+      {
+        "name": "Club-Sandwich.jpg",
+        "picture": "/img/foods/sandwich/Club-Sandwich.jpg",
+        "price": 10
+      },
+      {
+        "name": "French-Sandwiches.jpg",
+        "picture": "/img/foods/sandwich/French-Sandwiches.jpg",
+        "price": 35
+      },
+      {
+        "name": "Ham-Sandwich.png",
+        "picture": "/img/foods/sandwich/Ham-Sandwich.png",
+        "price": 30
+      },
+      {
+        "name": "Melt-Sandwich.png",
+        "picture": "/img/foods/sandwich/Melt-Sandwich.png",
+        "price": 20
+      }
+    ],
+    "Noodle": [
+      {
+        "name": "Ramen.jpg",
+        "picture": "/img/foods/noodles/Ramen.jpg",
+        "price": 35
+      },
+      {
+        "name": "Egg-Noodles.jpg",
+        "picture": "/img/foods/noodles/Egg-Noodles.jpg",
+        "price": 30
+      },
+      {
+        "name": "Harusame-Salad.jpg",
+        "picture": "/img/foods/noodles/Harusame-Salad.jpg",
+        "price": 25
+      },
+      {
+        "name": "Rice-Noodles.jpg",
+        "picture": "/img/foods/noodles/Rice-Noodles.jpg",
+        "price": 25
+      },
+      {
+        "name": "Shirataki-Noodles.jpg",
+        "picture": "/img/foods/noodles/Shirataki-Noodles.jpg",
+        "price": 20
+      },
+      {
+        "name": "Soba.jpg",
+        "picture": "/img/foods/noodles/Soba.jpg",
+        "price": 30
+      },
+      {
+        "name": "Somen-Noodles.jpg",
+        "picture": "/img/foods/noodles/Somen-Noodles.jpg",
+        "price": 35
+      },
+      {
+        "name": "Udon-Noodle.jpg",
+        "picture": "/img/foods/noodles/Udon-Noodle.jpg",
+        "price": 30
+      }
+    ],
+    "Indian Rice": [
+      {
+        "name": "Coconut_Rice.jpg",
+        "picture": "/img/foods/indian_rice/Coconut_Rice.jpg",
+        "price": 25
+      },
+      {
+        "name": "Lemon-Rice.jpg",
+        "picture": "/img/foods/indian_rice/Lemon-Rice.jpg",
+        "price": 20
+      },
+      {
+        "name": "Palak-Rice.jpg",
+        "picture": "/img/foods/indian_rice/Palak-Rice.jpg",
+        "price": 25
+      },
+      {
+        "name": "Pudina-Rice.jpg",
+        "picture": "/img/foods/indian_rice/Pudina-Rice.jpg",
+        "price": 25
+      },
+      {
+        "name": "Tomato-Rice.webp",
+        "picture": "/img/foods/indian_rice/Tomato-Rice.webp",
+        "price": 25
+      },
+      {
+        "name": "Vegetable-Biryani.jpg",
+        "picture": "/img/foods/indian_rice/Vegetable-Biryani.jpg",
+        "price": 30
+      },
+      {
+        "name": "Vegetable-Fried-Rice.jpg",
+        "picture": "/img/foods/indian_rice/Vegetable-Fried-Rice.jpg",
+        "price": 30
+      },
+      {
+        "name": "Vegetable-Pulao.jpg",
+        "picture": "/img/foods/indian_rice/Vegetable-Pulao.jpg",
+        "price": 30
+      }
+    ],
+    "French Fries": [
+      {
+        "name": "Chili-Cheese-Fries.webp",
+        "picture": "/img/foods/french_fries/Chili-Cheese-Fries.webp",
+        "price": 15
+      },
+      {
+        "name": "Cottage-Fries.jpg",
+        "picture": "/img/foods/french_fries/Cottage-Fries.jpg",
+        "price": 15
+      },
+      {
+        "name": "Crinkle-Cut-Fries.webp",
+        "picture": "/img/foods/french_fries/Crinkle-Cut-Fries.webp",
+        "price": 10
+      },
+      {
+        "name": "Matchstick-Fries.jpg",
+        "picture": "/img/foods/french_fries/Matchstick-Fries.jpg",
+        "price": 15
+      },
+      {
+        "name": "Poutine_Fries.jpg",
+        "picture": "/img/foods/french_fries/Poutine_Fries.jpg",
+        "price": 10
+      },
+      {
+        "name": "Steak-Fries.jpg",
+        "picture": "/img/foods/french_fries/Steak-Fries.jpg",
+        "price": 15
+      },
+      {
+        "name": "Sweet-Potato-Fries.jpg",
+        "picture": "/img/foods/french_fries/Sweet-Potato-Fries.jpg",
+        "price": 10
+      },
+      {
+        "name": "Waffle-Fries.jpg",
+        "picture": "/img/foods/french_fries/Waffle-Fries.jpg",
+        "price": 10
+      }
+    ]
+  }
+}

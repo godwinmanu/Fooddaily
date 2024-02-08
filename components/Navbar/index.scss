@@ -13,6 +13,12 @@ nav {
   .brand-name {
     font-size: 1.2rem;
     font-weight: bold;
+    display: flex;
+    height: 100;
+
+    img {
+      translate: 0 -2px;
+    }
 
     span:nth-child(2) {
       color: $mainColor;
@@ -33,12 +39,13 @@ nav {
 
         &.active {
           position: relative;
+          display: flex;
+          justify-content: center;
 
           &::after {
             content: "";
             position: absolute;
             bottom: -10px;
-            right: 45%;
             width: 7px;
             height: 7px;
             border-radius: 50%;

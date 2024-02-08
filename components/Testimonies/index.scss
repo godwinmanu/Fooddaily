@@ -1,0 +1,58 @@
+@import "../../styles/common.scss";
+
+.testimonies {
+  padding: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  .testimonies-box {
+    h1 {
+      padding: 2rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .slider {
+      width: 350px;
+
+      .testimony {
+        padding: 1.2rem;
+        width: 100%;
+        height: 250px;
+
+        .message {
+          width: 100%;
+          text-align: justify;
+          font-size: 0.9rem;
+          font-style: italic;
+        }
+
+        .author {
+          padding: 1.2rem 0;
+          display: flex;
+          gap: 7px;
+
+          img {
+            border-radius: 50%;
+          }
+
+          .name-and-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .name {
+              font-weight: 500;
+            }
+          }
+        }
+        .marks {
+          display: flex;
+          gap: 5px;
+        }
+      }
+    }
+  }
+}
