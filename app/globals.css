@@ -48,18 +48,12 @@ h6 {
 
 html {
   background-image: linear-gradient(
-    140deg,
-    hsl(0deg 70% 96%) 0%,
-    hsl(0deg 70% 96%) 1%,
-    hsl(0deg 70% 97%) 2%,
-    hsl(0deg 71% 97%) 2%,
-    hsl(0deg 71% 98%) 3%,
-    hsl(0deg 71% 98%) 4%,
-    hsl(0deg 71% 98%) 5%,
-    hsl(0deg 72% 99%) 7%,
-    hsl(0deg 72% 99%) 11%,
-    hsl(0deg 72% 99%) 19%,
-    hsl(0deg 72% 100%) 45%,
-    hsl(0deg 0% 100%) 100%
+    180deg,
+    hsl(354deg 100% 98%) 0%,
+    hsl(353deg 100% 98%) 0%,
+    hsl(350deg 100% 99%) 2%,
+    hsl(0deg 100% 99%) 9%,
+    hsl(0deg 100% 100%) 23%,
+    hsl(0deg 0% 100%) 86%
   );
 }

@@ -1,3 +1,84 @@
+@import "../../styles/common.scss";
+
 footer {
-  padding: 2%;
+  width: 100%;
+  display: flex;
+  padding: 2rem;
+  font-size: 0.8rem;
+  color: #413f41;
+  justify-content: space-evenly;
+
+  .about-brand,
+  .contact,
+  .newsletter,
+  .about-firm,
+  .about-website {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+
+    h3 {
+      color: #474547;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .section-infos {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  .about-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 250px;
+
+    p {
+      padding: 10px 0px;
+    }
+
+    .social-media {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: $mainColor;
+
+      .social-link:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .newsletter {
+    form {
+      padding-top: 10px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      position: relative;
+
+      input {
+        width: 100%;
+        border-radius: 25px;
+        border: 0.5px solid rgb(238, 235, 235);
+        padding: 10px 20px;
+        outline: none;
+      }
+
+      button {
+        color: $mainColor;
+        font-size: 1.2rem;
+        position: absolute;
+        right: 7px;
+        border-radius: 50%;
+        padding: 7px;
+        background-color: rgba($color: $mainColor, $alpha: 0.06);
+      }
+    }
+  }
 }

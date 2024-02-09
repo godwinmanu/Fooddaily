@@ -5,8 +5,7 @@ import "./index.scss";
 import { ShoppingCart, User } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { menuLinks } from "@/routes";
-import Image from "next/image";
-import cherry from "@/public/img/cherry.svg";
+import BrandLogo from "../BrandLogo";
 
 const Navbar = () => {
   const urlPathName = usePathname();
@@ -17,11 +16,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="brand-name">
-        <Image src={cherry} alt="cherry" width={20} height={20} />
-        <span>Food</span>
-        <span>daily.</span>
-      </div>
+      <BrandLogo />
       <ul>
         {menuLinks.map((item, index) => {
           return (

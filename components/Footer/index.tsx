@@ -1,26 +1,48 @@
 import Link from "next/link";
 import "./index.scss";
-import { LuFacebook, LuGithub, LuLinkedin, LuTwitter } from "react-icons/lu";
+import { LuFacebook, LuInstagram, LuTwitter } from "react-icons/lu";
+import BrandLogo from "../BrandLogo";
+import { PiPaperPlaneRightLight } from "react-icons/pi";
 
 const Footer = () => {
   return (
     <footer>
-      <div className="general-infos">
-        <ul className="about-firm">
+      <div className="about-brand">
+        <BrandLogo />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
+          quidem.
+        </p>
+        <div className="social-media">
+          <LuInstagram className="social-link" />
+          <LuFacebook className="social-link" />
+          <LuTwitter className="social-link" />
+        </div>
+      </div>
+      <div className="about-firm">
+        <h3>About</h3>
+        <ul className="section-infos">
           <li>
             {" "}
             <Link href="#">About Us</Link>{" "}
           </li>
           <li>
             {" "}
-            <Link href="#">Newsletter</Link>{" "}
+            <Link href="#">News</Link>{" "}
           </li>
           <li>
             {" "}
-            <Link href="#">Partners Sites</Link>{" "}
+            <Link href="#">Blog</Link>{" "}
+          </li>
+          <li>
+            {" "}
+            <Link href="#">Our Partners</Link>{" "}
           </li>
         </ul>
-        <ul className="about-website">
+      </div>
+      <div className="about-website">
+        <h3>Useful Links</h3>
+        <ul className="section-infos">
           <li>
             {" "}
             <Link href="#">Privacy Policy</Link>{" "}
@@ -38,34 +60,26 @@ const Footer = () => {
             <Link href="#">Contact Us</Link>{" "}
           </li>
         </ul>
-        <div className="about-dev">
-          <p>HOUENOU Emmanuel Godwin</p>
-          <p>Cotonou, Bénin</p>
-          <a href="mailto:godwinemmanuel302@gmail.com">
-            godwinemmanuel302@gmail.com
+      </div>
+      <div className="contact">
+        <h3>Contact</h3>
+        <div className="section-infos">
+          <p>California, USA</p>
+          <a href="mailto:fooddaily.bygodwinmanu@gmail.com">
+            fooddaily.bygodwinmanu@gmail.com
           </a>
-          <a href="tel:+22963797435"></a>
-        </div>
-        <div className="newsletter">
-          <h3>Subscribe to our daily newsletter</h3>
-          <p>Get the best food tips and diet advice every day.</p>
-          <form>
-            <input type="email" name="email" placeholder="Enter your email" />
-            <button>Submit</button>
-          </form>
+          <a href="#">+XX XXXXXXXX</a>
         </div>
       </div>
-      <hr />
-      <div className="copyright-social-infos">
-        <div className="copyright">
-          &copy; 2024 Copyright. All rights reserved.
-        </div>
-        <div className="social-media">
-          <LuLinkedin />
-          <LuFacebook />
-          <LuTwitter />
-          <LuGithub />
-        </div>
+      <div className="newsletter">
+        <h3>Subscribe to our daily newsletter</h3>
+        <p>Get the best food tips and diet advice every day.</p>
+        <form>
+          <input type="email" name="email" placeholder="Enter your email" />
+          <button>
+            <PiPaperPlaneRightLight />
+          </button>
+        </form>
       </div>
     </footer>
   );

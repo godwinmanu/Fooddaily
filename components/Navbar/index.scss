@@ -10,21 +10,6 @@ nav {
   align-items: center;
   width: 100%;
 
-  .brand-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    display: flex;
-    height: 100;
-
-    img {
-      translate: 0 -2px;
-    }
-
-    span:nth-child(2) {
-      color: $mainColor;
-    }
-  }
-
   ul {
     list-style-type: none;
     display: flex;
