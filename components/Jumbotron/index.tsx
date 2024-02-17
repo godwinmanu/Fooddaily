@@ -1,9 +1,8 @@
 "use client";
 
-import imageKitLoader from "@/utils/imageLoader";
 import Image from "next/image";
 import "./index.scss";
-import illustration from "@/public/img/illustration.png";
+import illustration from "@/public/img/Illustration3.png";
 import { IoHeartCircleSharp } from "react-icons/io5";
 
 const Jumbotron = () => {
@@ -30,14 +29,12 @@ const Jumbotron = () => {
         </div>
       </div>
       <div className="exhibition-image">
-        <div className="image-box">
-          <Image
-            src={illustration}
-            alt="Exhibition image"
-            width={350}
-            height={200}
-          />
-        </div>
+        <Image
+          src={illustration}
+          alt="Exhibition image"
+          width={500}
+          height={200}
+        />
       </div>
     </div>
   );

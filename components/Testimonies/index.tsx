@@ -7,6 +7,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IoStar, IoStarHalf } from "react-icons/io5";
 import { testimonies } from "@/data/data.json";
+import imageKitLoader from "@/utils/imageLoader";
+import testimoniesPicture from "@/public/img/illustration2.png";
 
 const Testimonies = () => {
   const sliderSettings = {
@@ -21,8 +23,8 @@ const Testimonies = () => {
     <div className="testimonies">
       <div className="illustration">
         <Image
-          src="/img/chef.png"
-          alt="illustration"
+          src={testimoniesPicture}
+          alt="chef indexing testimonies"
           width={400}
           height={400}
         />
@@ -37,14 +39,15 @@ const Testimonies = () => {
                 <div className="message">{item.thoughts}</div>
                 <div className="author">
                   <Image
-                    src="/img/chef.png"
+                    loader={imageKitLoader}
+                    src={item.customerPicture}
                     alt="avatar"
                     width={50}
                     height={50}
                   />
                   <div className="name-and-title">
                     <small className="name">{item.customerName}</small>
-                    <small className="title">Customer</small>
+                    <small className="title">{item.customerTitle}</small>
                   </div>
                 </div>
                 <div className="marks">

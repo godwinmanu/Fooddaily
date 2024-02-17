@@ -113,17 +113,9 @@
     justify-content: flex-end;
     align-items: center;
 
-    .image-box {
-      translate: 0px -20px;
-      border: 2px solid #ecbdbd;
-      border-radius: 10px;
-      // background-color: #fceeee;
-      img {
-        // border: 1px solid rgb(62, 63, 62);
-        height: 100%;
-        translate: -20px 20px;
-        border-radius: 10px;
-      }
+    img {
+      width: 500px;
+      height: auto;
     }
   }
 }

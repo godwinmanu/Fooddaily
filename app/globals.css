@@ -48,48 +48,55 @@ h6 {
 
 html {
   background-image: linear-gradient(
-    180deg,
-    hsl(354deg 100% 98%) 0%,
-    hsl(353deg 100% 98%) 0%,
-    hsl(350deg 100% 99%) 2%,
-    hsl(0deg 100% 99%) 9%,
-    hsl(0deg 100% 100%) 23%,
-    hsl(0deg 0% 100%) 86%
+    115deg,
+    hsl(355deg 85% 97%) 0%,
+    hsl(355deg 85% 98%) 31%,
+    hsl(355deg 85% 98%) 40%,
+    hsl(355deg 85% 98%) 43%,
+    hsl(355deg 86% 99%) 43%,
+    hsl(355deg 86% 99%) 45%,
+    hsl(355deg 86% 99%) 48%,
+    hsl(355deg 86% 99%) 57%,
+    hsl(355deg 87% 100%) 73%,
+    hsl(0deg 0% 100%) 100%
   );
   background-image: -moz-linear-gradient(
-    180deg,
-    hsl(354deg 100% 98%) 0%,
-    hsl(353deg 100% 98%) 0%,
-    hsl(350deg 100% 99%) 2%,
-    hsl(0deg 100% 99%) 9%,
-    hsl(0deg 100% 100%) 23%,
-    hsl(0deg 0% 100%) 86%
+    115deg,
+    hsl(355deg 85% 97%) 0%,
+    hsl(355deg 85% 98%) 31%,
+    hsl(355deg 85% 98%) 40%,
+    hsl(355deg 85% 98%) 43%,
+    hsl(355deg 86% 99%) 43%,
+    hsl(355deg 86% 99%) 45%,
+    hsl(355deg 86% 99%) 48%,
+    hsl(355deg 86% 99%) 57%,
+    hsl(355deg 87% 100%) 73%,
+    hsl(0deg 0% 100%) 100%
   );
   background-image: -webkit-linear-gradient(
-    180deg,
-    hsl(354deg 100% 98%) 0%,
-    hsl(353deg 100% 98%) 0%,
-    hsl(350deg 100% 99%) 2%,
-    hsl(0deg 100% 99%) 9%,
-    hsl(0deg 100% 100%) 23%,
-    hsl(0deg 0% 100%) 86%
+    115deg,
+    hsl(355deg 85% 97%) 0%,
+    hsl(355deg 85% 98%) 31%,
+    hsl(355deg 85% 98%) 40%,
+    hsl(355deg 85% 98%) 43%,
+    hsl(355deg 86% 99%) 43%,
+    hsl(355deg 86% 99%) 45%,
+    hsl(355deg 86% 99%) 48%,
+    hsl(355deg 86% 99%) 57%,
+    hsl(355deg 87% 100%) 73%,
+    hsl(0deg 0% 100%) 100%
   );
   background-image: -o-linear-gradient(
-    180deg,
-    hsl(354deg 100% 98%) 0%,
-    hsl(353deg 100% 98%) 0%,
-    hsl(350deg 100% 99%) 2%,
-    hsl(0deg 100% 99%) 9%,
-    hsl(0deg 100% 100%) 23%,
-    hsl(0deg 0% 100%) 86%
-  );
-  background-image: -ms-linear-gradient(
-    180deg,
-    hsl(354deg 100% 98%) 0%,
-    hsl(353deg 100% 98%) 0%,
-    hsl(350deg 100% 99%) 2%,
-    hsl(0deg 100% 99%) 9%,
-    hsl(0deg 100% 100%) 23%,
-    hsl(0deg 0% 100%) 86%
+    115deg,
+    hsl(355deg 85% 97%) 0%,
+    hsl(355deg 85% 98%) 31%,
+    hsl(355deg 85% 98%) 40%,
+    hsl(355deg 85% 98%) 43%,
+    hsl(355deg 86% 99%) 43%,
+    hsl(355deg 86% 99%) 45%,
+    hsl(355deg 86% 99%) 48%,
+    hsl(355deg 86% 99%) 57%,
+    hsl(355deg 87% 100%) 73%,
+    hsl(0deg 0% 100%) 100%
   );
 }

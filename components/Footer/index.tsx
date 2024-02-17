@@ -64,11 +64,11 @@ const Footer = () => {
       <div className="contact">
         <h3>Contact</h3>
         <div className="section-infos">
-          <p>California, USA</p>
-          <a href="mailto:fooddaily.bygodwinmanu@gmail.com">
-            fooddaily.bygodwinmanu@gmail.com
+          <p>Abomey-Calavi, Bénin</p>
+          <a href="mailto:godwinemmanuel302@gmail.com">
+            godwinemmanuel302@gmail.com
           </a>
-          <a href="#">+XX XXXXXXXX</a>
+          <a href="tel:+22963797435">+229 63797435</a>
         </div>
       </div>
       <div className="newsletter">

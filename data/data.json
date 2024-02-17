@@ -19,18 +19,24 @@
   "testimonies": [
     {
       "customerName": "John Doe",
+      "customerPicture": "witnesses/witness1.jpg",
+      "customerTitle": "Customer",
       "thoughts": "Fooddaily is the best. They are the fastest food delivery service in the town.I really recommend them. It's my first experience with online food ordering and I'm so satisfied.",
       "rate": 5
     },
     {
       "customerName": "Jane Doe",
+      "customerPicture": "witnesses/witness2.jpg",
+      "customerTitle": "Partner",
       "thoughts": "Not only they are fast but they also provide best foods in the town. Since I discover them, I can't keep myself to use their plateform to order foods anytime when I'm busy.",
-      "rate": 5
+      "rate": 4.8
     },
     {
       "customerName": "Customer Robert",
+      "customerPicture": "witnesses/witness3.jpg",
+      "customerTitle": "Customer",
       "thoughts": "Fooddaily is the best. They are the fastest food delivery service in the town.I really recommend them. It's my first experience with online food ordering and I'm so satisfied.",
-      "rate": 4.8
+      "rate": 5
     }
   ],
   "topFoods": [
