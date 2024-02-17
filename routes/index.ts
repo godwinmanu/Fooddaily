@@ -8,8 +8,8 @@ export const menuLinks = [
     path: "/menu",
   },
   {
-    name: "Services",
-    path: "/services",
+    name: "Blog",
+    path: "/blog",
   },
   {
     name: "About",

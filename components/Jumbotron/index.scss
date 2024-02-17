@@ -29,7 +29,7 @@
     }
 
     h1 {
-      color: #1e2133;
+      color: $blueNight;
       font-size: 3rem;
       font-weight: bold;
       line-height: 4rem;
@@ -41,7 +41,7 @@
 
     p {
       padding: 1rem 0rem;
-      color: #1e2133;
+      color: $blueNight;
     }
 
     .call-to-actions {
@@ -80,11 +80,11 @@
       }
 
       .tracking-btn {
-        background-color: #1e2133;
+        background-color: $blueNight;
 
         &::before {
           content: "";
-          background-color: #1e2133;
+          background-color: $blueNight;
           position: absolute;
           top: 0;
           bottom: 0;
@@ -96,7 +96,7 @@
 
         &::after {
           content: "";
-          background-color: #1e2133;
+          background-color: $blueNight;
           position: absolute;
           top: 0;
           bottom: 0;

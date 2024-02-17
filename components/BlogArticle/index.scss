@@ -1,0 +1,31 @@
+@import "../../styles/common.scss";
+
+.blog-article {
+  padding: 3rem;
+  display: flex;
+  gap: 100px;
+
+  .article-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    button {
+      @include buttonStyle(10px, 25px, 50px);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      width: fit-content;
+      background-color: $blueNight;
+    }
+  }
+}
