@@ -1,14 +1,13 @@
 @import "../../styles/common.scss";
 
 .jumbotron {
+  width: 100%;
   padding: 2rem 0rem;
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  gap: 50px;
 
   .jumbotron-text {
-    width: 70%;
-    // border: 1px solid rgb(62, 63, 62);
-
     .slogan {
       display: flex;
       gap: 7px;
@@ -108,14 +107,13 @@
     }
   }
   .exhibition-image {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    width: 800px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
 
     img {
-      width: 500px;
-      height: auto;
+      object-fit: contain;
     }
   }
 }

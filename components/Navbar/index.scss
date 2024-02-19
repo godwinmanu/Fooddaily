@@ -4,7 +4,6 @@ nav {
   @include x-gutter;
   padding-top: 2%;
   padding-bottom: 2%;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,10 +12,12 @@ nav {
   ul {
     list-style-type: none;
     display: flex;
+    justify-content: center;
     gap: 25px;
+    width: auto;
 
     li {
-      width: 100%;
+      width: auto;
 
       a {
         width: 100%;

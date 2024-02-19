@@ -19,7 +19,7 @@
       text-align: justify;
     }
 
-    button {
+    a {
       @include buttonStyle(10px, 25px, 50px);
       display: flex;
       align-items: center;

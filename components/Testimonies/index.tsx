@@ -9,10 +9,23 @@ import { IoStar, IoStarHalf } from "react-icons/io5";
 import { testimonies } from "@/data/data.json";
 import imageKitLoader from "@/utils/imageLoader";
 import testimoniesPicture from "@/public/img/illustration2.png";
+import leftArrow from "@/public/img/left-arrow.svg";
+import rightArrow from "@/public/img/right-arrow.svg";
+import { useRef } from "react";
 
 const Testimonies = () => {
+  let sliderRef: Slider = useRef(null);
+
+  const next = () => {
+    sliderRef.slickNext();
+  };
+  const previous = () => {
+    sliderRef.slickPrev();
+  };
+
   const sliderSettings = {
-    dots: true,
+    arrows: false,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -32,7 +45,13 @@ const Testimonies = () => {
 
       <div className="testimonies-box">
         <h1>What our customers say</h1>
-        <Slider className="slider" {...sliderSettings}>
+        <Slider
+          className="slider"
+          ref={(slider) => {
+            sliderRef = slider;
+          }}
+          {...sliderSettings}
+        >
           {testimonies.map((item, index) => {
             return (
               <div key={index} className="testimony">
@@ -62,6 +81,14 @@ const Testimonies = () => {
             );
           })}
         </Slider>
+        <div className="nav-arrows">
+          <button onClick={previous}>
+            <Image src={leftArrow} alt="Prev" width={15} height={5} />
+          </button>
+          <button onClick={next}>
+            <Image src={rightArrow} alt="Next" width={15} height={5} />
+          </button>
+        </div>
       </div>
     </div>
   );

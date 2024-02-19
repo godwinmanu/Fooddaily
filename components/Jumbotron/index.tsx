@@ -17,11 +17,11 @@ const Jumbotron = () => {
         </div>
 
         <h1>
-          Be the fastest in delivering your <span>food</span>.
+          Fooddaily - where taste meets express <span>delivery</span>.
         </h1>
         <p>
-          Imagine you don&apos;t need a diet because we provide healthy and
-          delicious food for you.
+          Imagine you don&apos;t need to compromise on hunger and speed, because
+          at Fooddaily, we bring you the best of both worlds.
         </p>
         <div className="call-to-actions">
           <button className="order-btn">Order Now</button>
@@ -29,12 +29,7 @@ const Jumbotron = () => {
         </div>
       </div>
       <div className="exhibition-image">
-        <Image
-          src={illustration}
-          alt="Exhibition image"
-          width={500}
-          height={200}
-        />
+        <Image src={illustration} alt="Exhibition image" fill />
       </div>
     </div>
   );

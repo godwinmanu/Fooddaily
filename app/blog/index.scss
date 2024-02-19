@@ -1,0 +1,35 @@
+@import "../../styles/common.scss";
+
+.article {
+  padding: 3rem;
+  @include x-gutter;
+
+  .article-image {
+    margin: 2rem 0;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 2rem 0;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  p {
+    text-align: justify;
+    padding: 2rem 0;
+    padding-top: 1rem;
+  }
+}
