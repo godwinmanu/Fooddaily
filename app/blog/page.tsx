@@ -4,6 +4,7 @@
 import Image from "next/image";
 import "./index.scss";
 import imageKitLoader from "@/utils/imageLoader";
+import { Calendar, Clock } from "lucide-react";
 
 const Blog = () => {
   return (
@@ -16,9 +17,25 @@ const Blog = () => {
           alt="meat-dish-as-discount-image"
         />
       </div>
+      <div className="about-article">
+        <div className="reading-time">
+          <Clock size={15} /> 5min read
+        </div>
+        <div className="post-date">
+          <Calendar size={15} /> Posted on February 19, 2024
+        </div>
+      </div>
       <h1>
         Healthy Meals, Healthy Mind: The Impact of Nutrition on Mental Health
       </h1>
+
+      <p className="hastags">
+        <span>#health</span>
+        <span>#nutrition</span>
+        <span>#wellBeing</span>
+        <span>#mentalHealth</span>
+        <span>#heathyFood</span>
+      </p>
 
       <p>
         The age-old saying "You are what you eat" takes on its full meaning when
@@ -65,7 +82,8 @@ const Blog = () => {
         between our diet and our mental well-being.
       </p>
 
-      <h2>Conclusion: Nourish the Body, Soothe the Mind</h2>
+      <h2>Conclusion</h2>
+      <h3>Nourish the Body, Soothe the Mind</h3>
       <p>
         In the end, the dietary choices we make play an essential role in how
         our brain functions and influences our mental health. Opting for a

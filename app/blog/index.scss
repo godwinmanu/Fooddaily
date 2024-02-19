@@ -1,7 +1,10 @@
+@use "sass:list";
 @import "../../styles/common.scss";
 
+$tagColors: rgba(86, 39, 101, 0.1), rgba(0, 131, 53, 0.1),
+  rgba(245, 77, 39, 0.1), rgba(0, 0, 0, 0.1), rgba(228, 147, 8, 0.1);
+
 .article {
-  padding: 3rem;
   @include x-gutter;
 
   .article-image {
@@ -16,6 +19,20 @@
     }
   }
 
+  .about-article {
+    display: flex;
+    justify-content: space-between;
+
+    .reading-time,
+    .post-date {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: $blueNight;
+      font-size: 15px;
+    }
+  }
+
   h1 {
     font-size: 2rem;
     font-weight: 700;
@@ -27,9 +44,31 @@
     font-weight: 500;
   }
 
+  h3 {
+    padding: 10px 0px;
+    padding-bottom: 0;
+    font-weight: 500;
+    font-style: italic;
+  }
+
   p {
     text-align: justify;
     padding: 2rem 0;
     padding-top: 1rem;
+  }
+
+  .hastags {
+    display: flex;
+    gap: 10px;
+
+    @each $tagColor in $tagColors {
+      span:nth-child(#{list.index($tagColors, $tagColor)}) {
+        font-size: 0.75rem;
+        background-color: $tagColor;
+        color: rgba($color: $tagColor, $alpha: 0.8);
+        border-radius: 30px;
+        padding: 3px 10px;
+      }
+    }
   }
 }
