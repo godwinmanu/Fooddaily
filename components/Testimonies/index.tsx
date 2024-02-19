@@ -14,7 +14,7 @@ import rightArrow from "@/public/img/right-arrow.svg";
 import { useRef } from "react";
 
 const Testimonies = () => {
-  let sliderRef: Slider = useRef(null);
+  let sliderRef: any = useRef(null);
 
   const next = () => {
     sliderRef.slickNext();
