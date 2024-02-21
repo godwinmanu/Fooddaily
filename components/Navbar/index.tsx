@@ -6,6 +6,7 @@ import { ShoppingCart, User } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { menuLinks } from "@/routes";
 import BrandLogo from "../BrandLogo";
+import { useEffect } from "react";
 
 const Navbar = () => {
   const urlPathName = usePathname();
@@ -14,23 +15,38 @@ const Navbar = () => {
     return urlPathName === menuPath ? "active" : "";
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 500) {
+        document.querySelector(".navbar-items")?.classList.add("fix");
+      } else {
+        document.querySelector(".navbar-items")?.classList.remove("fix");
+      }
+    });
+  }, []);
+
   return (
     <nav>
-      <BrandLogo />
-      <ul>
-        {menuLinks.map((item, index) => {
-          return (
-            <li key={index}>
-              <Link href={item.path} className={setActiveClassName(item.path)}>
-                {item.name}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-      <div className="user-stuff">
-        <ShoppingCart />
-        <User />
+      <div className="navbar-items">
+        <BrandLogo />
+        <ul>
+          {menuLinks.map((item, index) => {
+            return (
+              <li key={index}>
+                <Link
+                  href={item.path}
+                  className={setActiveClassName(item.path)}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+        <div className="user-stuff">
+          <ShoppingCart />
+          <User />
+        </div>
       </div>
     </nav>
   );
