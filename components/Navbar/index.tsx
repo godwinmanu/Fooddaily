@@ -17,7 +17,7 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 500) {
+      if (window.scrollY > 300) {
         document.querySelector(".navbar-items")?.classList.add("fix");
       } else {
         document.querySelector(".navbar-items")?.classList.remove("fix");
@@ -44,7 +44,9 @@ const Navbar = () => {
           })}
         </ul>
         <div className="user-stuff">
-          <ShoppingCart />
+          <span id="cart" data-count="0">
+            <ShoppingCart />
+          </span>
           <User />
         </div>
       </div>

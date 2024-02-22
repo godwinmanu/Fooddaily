@@ -18,6 +18,7 @@
     height: 500px;
     overflow-y: scroll;
     background-color: rgba($color: $mainColor, $alpha: 0.6);
+    position: relative;
 
     .food-card {
       cursor: pointer;
@@ -26,6 +27,7 @@
       width: 200px;
       height: 215px;
       padding: 10px;
+      position: relative;
 
       .dish-image {
         position: relative;
@@ -63,6 +65,13 @@
           gap: 10px;
           padding-bottom: 5px;
         }
+      }
+
+      .flyable {
+        z-index: 3;
+        position: absolute;
+        transform-origin: top right;
+        transition: transform 1s ease;
       }
     }
   }
