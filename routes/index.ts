@@ -5,7 +5,7 @@ export const menuLinks = [
   },
   {
     name: "Menu",
-    path: "/menu",
+    path: "/#food-menu",
   },
   {
     name: "Blog",

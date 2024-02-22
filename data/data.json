@@ -315,5 +315,14 @@
         "price": 10
       }
     ]
+  },
+  "foodTypeDraw": {
+    "All": "/img/all.png",
+    "Burger": "/img/burger.png",
+    "Pizza": "/img/pizza.svg",
+    "Sandwich": "/img/sandwitch.png",
+    "Noodle": "/img/noodles.png",
+    "Indian Rice": "/img/rice_2.png",
+    "French Fries": "/img/fries.png"
   }
 }
