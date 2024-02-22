@@ -20,11 +20,12 @@ interface Props {
 
 const FoodCard = ({ food }: Props) => {
   const storeOrders = (totalOrders: number) => {
+    const initialStorage = { totalOrders: 0, orders: [] };
     const storage = localStorage.getItem("orders");
-    const oldOrders = storage ? JSON.parse(storage) : null;
+    const oldOrders = storage ? JSON.parse(storage) : initialStorage;
     const orders = {
       totalOrders,
-      orders: [{ ...food, quantity: 0 }, ...oldOrders?.orders],
+      orders: [{ ...food, quantity: 1 }, ...oldOrders?.orders],
     };
     localStorage.setItem("orders", JSON.stringify(orders));
   };

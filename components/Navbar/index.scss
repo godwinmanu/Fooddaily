@@ -66,6 +66,7 @@ nav {
 
       #cart {
         position: relative;
+        cursor: pointer;
 
         &::before {
           content: attr(data-count);

@@ -7,12 +7,19 @@ import { usePathname } from "next/navigation";
 import { menuLinks } from "@/routes";
 import BrandLogo from "../BrandLogo";
 import { useEffect } from "react";
+import { useStore } from "@/data/store";
+import Cart from "@/components/Cart";
 
 const Navbar = () => {
   const urlPathName = usePathname();
+  const { showCart, setShowCart } = useStore();
 
   const setActiveClassName = (menuPath: string): string => {
     return urlPathName === menuPath ? "active" : "";
+  };
+
+  const toggleCartDisplay = () => {
+    setShowCart();
   };
 
   useEffect(() => {
@@ -44,12 +51,13 @@ const Navbar = () => {
           })}
         </ul>
         <div className="user-stuff">
-          <span id="cart" data-count="0">
+          <span id="cart" data-count="0" onClick={toggleCartDisplay}>
             <ShoppingCart />
           </span>
           <User />
         </div>
       </div>
+      {showCart ? <Cart /> : null}
     </nav>
   );
 };
