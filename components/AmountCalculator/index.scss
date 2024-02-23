@@ -1,0 +1,42 @@
+@import "../../styles/common.scss";
+
+$cartMainColor: #b5b5bd;
+
+.calculator {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .counter {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+
+    span {
+      border-radius: 3px;
+      font-size: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2px 3px;
+
+      &:nth-child(1),
+      &:nth-child(3) {
+        background-color: rgba($color: $cartMainColor, $alpha: 0.1);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .amount {
+    display: flex;
+    gap: 5px;
+    font-weight: 500;
+
+    span {
+      color: $blueNight;
+    }
+  }
+}

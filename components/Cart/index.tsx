@@ -3,10 +3,13 @@
 
 import Image from "next/image";
 import "./index.scss";
-import { Minus, Plus } from "lucide-react";
+import { Clock } from "lucide-react";
 import { FaTimesCircle } from "react-icons/fa";
 import { formatFoodName } from "@/utils/helpers";
 import { useStore } from "@/data/store";
+import AmountCalculator from "../AmountCalculator";
+import { useEffect, useState } from "react";
+import imageKitLoader from "@/utils/imageLoader";
 
 interface Product {
   name: string;
@@ -20,9 +23,71 @@ const Cart = () => {
   const storage = localStorage.getItem("orders");
   const orders = storage ? JSON.parse(storage) : null;
 
+  const [promoCode, setPromoCode] = useState("");
+
   const closeCart = () => {
     setShowCart();
   };
+
+  const computeDiscount = (
+    amount: number,
+    triggerFromClick: boolean = false
+  ) => {
+    const discountTag = document.querySelector(".discount");
+    const jokeEmoji = document.querySelector(".joke-emoji") as HTMLElement;
+    if (promoCode) {
+      if (promoCode === "Godwin") {
+        if (discountTag) {
+          discountTag.textContent = (amount * 0.3).toString();
+
+          if (jokeEmoji && triggerFromClick) {
+            jokeEmoji.setAttribute("src", "/img/yes.gif");
+            jokeEmoji.style.display = "flex";
+          }
+        }
+        return amount * 0.3;
+      } else {
+        if (discountTag) {
+          discountTag.textContent = "0";
+          if (jokeEmoji && triggerFromClick) {
+            jokeEmoji.setAttribute("src", "/img/no.gif");
+            jokeEmoji.style.display = "flex";
+          }
+        }
+        return 0;
+      }
+    } else {
+      return 0;
+    }
+  };
+
+  const computeSubtotal = () => {
+    const orderElements = document.querySelectorAll(".order");
+    const subTotalTag = document.querySelector(".subtotal");
+    const totalAmountTag = document.querySelector("b");
+    let subtotal = 5;
+
+    for (const order of orderElements) {
+      const orderAmount = order.querySelector(".computed-amount");
+      subtotal += Number(orderAmount?.textContent);
+    }
+
+    if (subTotalTag) {
+      subTotalTag.textContent = subtotal.toString();
+    }
+
+    if (totalAmountTag) {
+      totalAmountTag.textContent = (
+        subtotal - computeDiscount(subtotal)
+      ).toString();
+    }
+
+    return subtotal;
+  };
+
+  useEffect(() => {
+    computeSubtotal();
+  }, []);
 
   return (
     <div className="user-cart">
@@ -32,49 +97,93 @@ const Cart = () => {
           <FaTimesCircle />
         </span>
       </h1>
-      <div className="orders">
-        {!orders ? (
-          <div className="no-order">No order</div>
-        ) : (
-          orders?.orders.map((item: Product, index: number) => {
-            return (
-              <div key={index} className="order">
-                <div className="product-pic">
-                  <Image
-                    src={item.picture}
-                    alt={formatFoodName(item.name)}
-                    fill
-                  />
-                </div>
-                <div className="order-infos">
-                  <div className="product-name-and-price">
-                    <div className="product-name">
-                      {formatFoodName(item.name)}
-                    </div>
-                    <div className="product-price">${item.price}</div>
+      {!orders ? (
+        <div className="no-order">No order</div>
+      ) : (
+        <>
+          <div className="orders">
+            {orders?.orders.map((item: Product, index: number) => {
+              return (
+                <div key={index} className="order">
+                  <div className="product-pic">
+                    <Image
+                      src={item.picture}
+                      alt={formatFoodName(item.name)}
+                      fill
+                    />
                   </div>
-                  <div className="counter-and-amount">
-                    <div className="counter">
-                      <span>
-                        {" "}
-                        <Minus size={12} />{" "}
-                      </span>
-                      <span> {item.quantity} </span>
-                      <span>
-                        {" "}
-                        <Plus size={12} />{" "}
-                      </span>
+                  <div className="order-infos">
+                    <div className="product-name-and-price">
+                      <div className="product-name">
+                        {formatFoodName(item.name)}
+                      </div>
+                      <div className="product-price">${item.price}</div>
                     </div>
-                    <div className="amount">
-                      Total : <span>${item.quantity * item.price} </span>
-                    </div>
+                    <AmountCalculator
+                      computeSubtotal={computeSubtotal}
+                      initialQuantity={item.quantity}
+                      unitPrice={item.price}
+                    />
                   </div>
                 </div>
+              );
+            })}
+          </div>
+          <div className="check-out">
+            <div className="about-delivery">
+              <div className="delivery-icon">
+                <Clock />
               </div>
-            );
-          })
-        )}
-      </div>
+              <div className="cost-duration">
+                <span className="delivery-time">
+                  Delivery time
+                  <p>15-20 min</p>
+                </span>
+                <div className="delivery-cost">$5</div>
+              </div>
+            </div>
+            <div className="promo-code">
+              <div className="input-group">
+                <input
+                  type="text"
+                  onChange={(e) => setPromoCode(e.target.value)}
+                />
+                <Image
+                  className="joke-emoji"
+                  src="/img/no.gif"
+                  alt=""
+                  width={30}
+                  height={25}
+                />
+              </div>
+              <button onClick={() => computeDiscount(computeSubtotal(), true)}>
+                Apply
+              </button>
+            </div>
+            <div className="totals">
+              <p>
+                <span>Subtotal</span>
+                <span>
+                  $<span className="subtotal">{0}</span>
+                </span>
+              </p>
+              <p>
+                <span>Applied Promocode</span>
+                <span>
+                  - $<span className="discount">{0}</span>
+                </span>
+              </p>
+              <p>
+                <span>Total Amount</span>
+                <span className="total-amount">
+                  $<b>{0}</b>
+                </span>
+              </p>
+            </div>
+            <button className="order-btn">Proceed to Payment</button>
+          </div>
+        </>
+      )}
     </div>
   );
 };
