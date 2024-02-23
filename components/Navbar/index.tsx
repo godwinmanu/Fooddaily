@@ -30,6 +30,13 @@ const Navbar = () => {
         document.querySelector(".navbar-items")?.classList.remove("fix");
       }
     });
+
+    const cart = document.getElementById("cart");
+    if (cart) {
+      const storage = localStorage.getItem("orders");
+      const previousOrders = storage ? JSON.parse(storage) : [];
+      cart.setAttribute("data-count", `${previousOrders.length}`);
+    }
   }, []);
 
   return (
