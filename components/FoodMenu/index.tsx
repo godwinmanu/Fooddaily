@@ -5,12 +5,7 @@ import Image from "next/image";
 import "./index.scss";
 import { menu, foodTypeDraw } from "@/data/data.json";
 import FoodCard from "../FoodCard";
-
-interface Dish {
-  name: string;
-  picture: string;
-  price: number;
-}
+import { Product } from "../Cart";
 
 const FoodMenu = () => {
   const [foodType, setFoodType] = useState("All");
@@ -45,14 +40,14 @@ const FoodMenu = () => {
       <div className="menu-box">
         {foodType === "All"
           ? Object.keys(menu).map((foodCategory) => {
-              return (menu[foodCategory as keyof typeof menu] as Dish[]).map(
-                (food: Dish, index: number) => {
+              return (menu[foodCategory as keyof typeof menu] as Product[]).map(
+                (food: Product, index: number) => {
                   return <FoodCard key={index} food={food} />;
                 }
               );
             })
-          : (menu[foodType as keyof typeof menu] as Dish[]).map(
-              (food: Dish, index: number) => {
+          : (menu[foodType as keyof typeof menu] as Product[]).map(
+              (food: Product, index: number) => {
                 return <FoodCard key={index} food={food} />;
               }
             )}
