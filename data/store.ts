@@ -1,7 +1,10 @@
 import { Product } from "@/components/Cart";
 import create from "zustand";
 
-const storage = localStorage.getItem("orders");
+let storage;
+if (typeof window !== "undefined") {
+  storage = localStorage.getItem("orders");
+}
 const orders = storage ? JSON.parse(storage) : [];
 
 interface AppState {
@@ -41,7 +44,9 @@ export const useOrderStore = create<AppState>()((set, get) => ({
       }));
 
       setTimeout(() => {
-        localStorage.setItem("orders", JSON.stringify(get().orders));
+        if (typeof window !== "undefined") {
+          localStorage.setItem("orders", JSON.stringify(get().orders));
+        }
       }, 700);
     }
   },
@@ -61,7 +66,9 @@ export const useOrderStore = create<AppState>()((set, get) => ({
     }));
 
     setTimeout(() => {
-      localStorage.setItem("orders", JSON.stringify(updatedOrders));
+      if (typeof window !== "undefined") {
+        localStorage.setItem("orders", JSON.stringify(updatedOrders));
+      }
     }, 700);
   },
 
@@ -75,7 +82,9 @@ export const useOrderStore = create<AppState>()((set, get) => ({
     }));
 
     setTimeout(() => {
-      localStorage.setItem("orders", JSON.stringify(updatedOrders));
+      if (typeof window !== "undefined") {
+        localStorage.setItem("orders", JSON.stringify(updatedOrders));
+      }
     }, 700);
   },
 }));
