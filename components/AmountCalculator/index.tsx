@@ -1,19 +1,17 @@
 import React, { useState } from "react";
 import { Minus, Plus } from "lucide-react";
 import "./index.scss";
+import { Product } from "../Cart";
+import { useOrderStore } from "@/data/store";
 
 interface Props {
-  initialQuantity: number;
-  unitPrice: number;
+  product: Product;
   computeSubtotal: () => number;
 }
 
-const AmountCalculator = ({
-  initialQuantity,
-  unitPrice,
-  computeSubtotal,
-}: Props) => {
-  const [quantity, setQuantity] = useState(initialQuantity);
+const AmountCalculator = ({ product, computeSubtotal }: Props) => {
+  const [quantity, setQuantity] = useState(product.quantity);
+  const { updateOrderQuantity } = useOrderStore();
 
   const changeQuantity = (operation: string) => {
     if (operation === "decrease") {
@@ -21,17 +19,20 @@ const AmountCalculator = ({
         setQuantity(1);
         setTimeout(() => {
           computeSubtotal();
+          updateOrderQuantity({ ...product, quantity: quantity - 1 });
         }, 500);
       } else {
         setQuantity(quantity - 1);
         setTimeout(() => {
           computeSubtotal();
+          updateOrderQuantity({ ...product, quantity: quantity - 1 });
         }, 500);
       }
     } else {
       setQuantity(quantity + 1);
       setTimeout(() => {
         computeSubtotal();
+        updateOrderQuantity({ ...product, quantity: quantity + 1 });
       }, 500);
     }
   };
@@ -52,7 +53,7 @@ const AmountCalculator = ({
       <div className="amount">
         Total :{" "}
         <span>
-          $<span className="computed-amount">{quantity * unitPrice}</span>{" "}
+          $<span className="computed-amount">{quantity * product.price}</span>{" "}
         </span>
       </div>
     </div>

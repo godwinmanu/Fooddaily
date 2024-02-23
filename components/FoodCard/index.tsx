@@ -5,29 +5,19 @@ import { SyntheticEvent } from "react";
 import Image from "next/image";
 import "./index.scss";
 import { formatFoodName } from "@/utils/helpers";
-import { foodTypeDraw } from "@/data/data.json";
 import { PlusCircle } from "lucide-react";
-
-interface Dish {
-  name: string;
-  picture: string;
-  price: number;
-}
+import { useOrderStore } from "@/data/store";
+import { Product } from "../Cart";
 
 interface Props {
-  food: Dish;
+  food: Product;
 }
 
 const FoodCard = ({ food }: Props) => {
-  const storeOrders = (totalOrders: number) => {
-    const initialStorage = { totalOrders: 0, orders: [] };
-    const storage = localStorage.getItem("orders");
-    const oldOrders = storage ? JSON.parse(storage) : initialStorage;
-    const orders = {
-      totalOrders,
-      orders: [{ ...food, quantity: 1 }, ...oldOrders?.orders],
-    };
-    localStorage.setItem("orders", JSON.stringify(orders));
+  const { addOrder } = useOrderStore();
+
+  const storeOrder = () => {
+    addOrder({ ...food, quantity: 1 });
   };
 
   const addToCart = (e: SyntheticEvent) => {
@@ -77,12 +67,10 @@ const FoodCard = ({ food }: Props) => {
       )}px) scale(0.1)`;
     }
 
-    let dataCount = Number(cart.getAttribute("data-count"));
     setTimeout(function () {
       if (clonedDish && parent) {
         parent.removeChild(clonedDish);
-        cart.setAttribute("data-count", `${dataCount + 1}`);
-        storeOrders(dataCount);
+        storeOrder();
       }
     }, 1000);
   };

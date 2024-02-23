@@ -6,12 +6,12 @@ import "./index.scss";
 import { Clock } from "lucide-react";
 import { FaTimesCircle } from "react-icons/fa";
 import { formatFoodName } from "@/utils/helpers";
-import { useStore } from "@/data/store";
+import { useOrderStore } from "@/data/store";
 import AmountCalculator from "../AmountCalculator";
 import { useEffect, useState } from "react";
-import imageKitLoader from "@/utils/imageLoader";
 
-interface Product {
+export interface Product {
+  id: number;
   name: string;
   picture: string;
   price: number;
@@ -19,14 +19,16 @@ interface Product {
 }
 
 const Cart = () => {
-  const { setShowCart } = useStore();
-  const storage = localStorage.getItem("orders");
-  const orders = storage ? JSON.parse(storage) : null;
-
+  const { orders, setShowCart, removeOrder } = useOrderStore();
   const [promoCode, setPromoCode] = useState("");
+  const [emoji, setEmoji] = useState("/img/no.gif");
 
   const closeCart = () => {
     setShowCart();
+  };
+
+  const handleRemoveOrder = (order: Product) => {
+    removeOrder(order);
   };
 
   const computeDiscount = (
@@ -41,7 +43,8 @@ const Cart = () => {
           discountTag.textContent = (amount * 0.3).toString();
 
           if (jokeEmoji && triggerFromClick) {
-            jokeEmoji.setAttribute("src", "/img/yes.gif");
+            jokeEmoji.style.display = "none";
+            setEmoji("/img/yes.gif");
             jokeEmoji.style.display = "flex";
           }
         }
@@ -50,7 +53,8 @@ const Cart = () => {
         if (discountTag) {
           discountTag.textContent = "0";
           if (jokeEmoji && triggerFromClick) {
-            jokeEmoji.setAttribute("src", "/img/no.gif");
+            jokeEmoji.style.display = "none";
+            setEmoji("/img/no.gif");
             jokeEmoji.style.display = "flex";
           }
         }
@@ -97,12 +101,12 @@ const Cart = () => {
           <FaTimesCircle />
         </span>
       </h1>
-      {!orders ? (
+      {!orders.length ? (
         <div className="no-order">No order</div>
       ) : (
         <>
           <div className="orders">
-            {orders?.orders.map((item: Product, index: number) => {
+            {orders?.map((item: Product, index: number) => {
               return (
                 <div key={index} className="order">
                   <div className="product-pic">
@@ -116,13 +120,15 @@ const Cart = () => {
                     <div className="product-name-and-price">
                       <div className="product-name">
                         {formatFoodName(item.name)}
+                        <span onClick={() => handleRemoveOrder(item)}>
+                          <FaTimesCircle />
+                        </span>
                       </div>
                       <div className="product-price">${item.price}</div>
                     </div>
                     <AmountCalculator
                       computeSubtotal={computeSubtotal}
-                      initialQuantity={item.quantity}
-                      unitPrice={item.price}
+                      product={item}
                     />
                   </div>
                 </div>
@@ -150,7 +156,7 @@ const Cart = () => {
                 />
                 <Image
                   className="joke-emoji"
-                  src="/img/no.gif"
+                  src={emoji}
                   alt=""
                   width={30}
                   height={25}
@@ -168,7 +174,7 @@ const Cart = () => {
                 </span>
               </p>
               <p>
-                <span>Applied Promocode</span>
+                <span>Applied Promo Code</span>
                 <span>
                   - $<span className="discount">{0}</span>
                 </span>

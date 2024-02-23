@@ -86,7 +86,15 @@ $cartMainColor: #b5b5bd;
           font-weight: 500;
 
           .product-name {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
             color: $blueNight;
+
+            span {
+              cursor: pointer;
+              font-size: 0.8rem;
+            }
           }
         }
       }
@@ -95,7 +103,8 @@ $cartMainColor: #b5b5bd;
 
   .check-out {
     justify-self: flex-end;
-    height: auto;
+    background-color: white;
+    height: fit-content;
 
     .about-delivery {
       padding: 15px 5px;
