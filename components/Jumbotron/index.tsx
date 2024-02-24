@@ -4,8 +4,10 @@ import Image from "next/image";
 import "./index.scss";
 import illustration from "@/public/img/Illustration3.png";
 import { IoHeartCircleSharp } from "react-icons/io5";
+import { useRouter } from "next/navigation";
 
 const Jumbotron = () => {
+  const router = useRouter();
   return (
     <div className="jumbotron">
       <div className="jumbotron-text">
@@ -24,8 +26,14 @@ const Jumbotron = () => {
           at Fooddaily, we bring you the best of both worlds.
         </p>
         <div className="call-to-actions">
-          <button className="order-btn">Order Now</button>
-          <button className="tracking-btn">Track Order</button>
+          <button
+            className="order-btn"
+            onClick={() => router.push("/#food-menu")}
+          >
+            {" "}
+            Order Now
+          </button>
+          <button className="how-it-works">How it works ?</button>
         </div>
       </div>
       <div className="exhibition-image">

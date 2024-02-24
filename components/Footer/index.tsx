@@ -1,22 +1,26 @@
 import Link from "next/link";
 import "./index.scss";
-import { LuFacebook, LuInstagram, LuTwitter } from "react-icons/lu";
+import { LuFacebook, LuLinkedin } from "react-icons/lu";
 import BrandLogo from "../BrandLogo";
 import { PiPaperPlaneRightLight } from "react-icons/pi";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
     <footer>
       <div className="about-brand">
         <BrandLogo />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
-          quidem.
-        </p>
+        <p>Fooddaily - where taste meets express delivery.</p>
         <div className="social-media">
-          <LuInstagram className="social-link" />
-          <LuFacebook className="social-link" />
-          <LuTwitter className="social-link" />
+          <Link href="https://www.linkedin.com/in/emmanuel-godwin-houenou">
+            <LuLinkedin className="social-link" />
+          </Link>
+          <Link href="https://www.facebook.com/godwinmanu.dev">
+            <LuFacebook className="social-link" />
+          </Link>
+          <Link href="https://twitter.com/godwinmanu3">
+            <FaXTwitter className="social-link" />
+          </Link>
         </div>
       </div>
       <div className="about-firm">
