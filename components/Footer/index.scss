@@ -49,8 +49,16 @@ footer {
       gap: 10px;
       color: $mainColor;
 
-      .social-link:hover {
-        cursor: pointer;
+      a {
+        color: $mainColor;
+        border: 1px solid $mainColor;
+        padding: 5px;
+        border-radius: 50%;
+
+        &:hover {
+          cursor: pointer;
+          background-color: rgba($color: $mainColor, $alpha: 0.1);
+        }
       }
     }
   }

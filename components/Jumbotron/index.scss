@@ -80,6 +80,10 @@
 
       .how-it-works {
         background-color: $blueNight;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
 
         &::before {
           content: "";

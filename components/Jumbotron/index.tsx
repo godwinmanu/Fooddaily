@@ -5,6 +5,7 @@ import "./index.scss";
 import illustration from "@/public/img/Illustration3.png";
 import { IoHeartCircleSharp } from "react-icons/io5";
 import { useRouter } from "next/navigation";
+import { MdOutlineSlowMotionVideo } from "react-icons/md";
 
 const Jumbotron = () => {
   const router = useRouter();
@@ -33,7 +34,9 @@ const Jumbotron = () => {
             {" "}
             Order Now
           </button>
-          <button className="how-it-works">How it works ?</button>
+          <button className="how-it-works">
+            How it works <MdOutlineSlowMotionVideo size={18} />
+          </button>
         </div>
       </div>
       <div className="exhibition-image">
