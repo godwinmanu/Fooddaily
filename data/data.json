@@ -45,21 +45,24 @@
       "picture": "/img/foods/burgers/Pizza-Burger.png",
       "price": 25,
       "stars": 4,
-      "totalOrders": "12k"
+      "totalOrders": "12k",
+      "category": "Burger"
     },
     {
       "name": "Pepperoni-Pizza.jpg",
       "picture": "/img/foods/pizza/Pepperoni-Pizza.jpg",
       "price": 20,
       "stars": 5,
-      "totalOrders": "25k"
+      "totalOrders": "25k",
+      "category": "Pizza"
     },
     {
       "name": "Ramen.jpg",
       "picture": "/img/foods/noodles/Ramen.jpg",
       "price": 35,
       "stars": 4,
-      "totalOrders": "10k"
+      "totalOrders": "10k",
+      "category": "Noodle"
     }
   ],
   "menu": {

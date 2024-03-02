@@ -50,6 +50,11 @@
       justify-content: center;
       gap: 10px;
       padding-bottom: 5px;
+
+      &:disabled {
+        background-color: rgba($color: $blueNight, $alpha: 0.5);
+        cursor: not-allowed;
+      }
     }
   }
 

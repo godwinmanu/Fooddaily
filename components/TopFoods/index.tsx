@@ -29,15 +29,17 @@ const TopFoods = () => {
                   })}
                 </small>
                 <small>
-                  <FiShoppingCart />
-                  <span>{food.totalOrders} orders</span>
+                  <b>{food.category}</b>
                 </small>
               </p>
               <p className="food-price">
                 <span>$</span>
                 <span>{food.price}</span>
               </p>
-              <button>ADD TO CART</button>
+              <small className="total-orders">
+                <FiShoppingCart />
+                <span>{food.totalOrders} orders</span>
+              </small>
             </div>
           );
         })}

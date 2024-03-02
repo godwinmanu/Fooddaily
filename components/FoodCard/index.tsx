@@ -14,7 +14,14 @@ interface Props {
 }
 
 const FoodCard = ({ food }: Props) => {
-  const { addOrder } = useOrderStore();
+  const { addOrder, orders } = useOrderStore();
+
+  const checkOrderExistence = (foodId: number): boolean => {
+    const foundOrder = orders.find((order) => {
+      return order.id === foodId;
+    });
+    return foundOrder ? true : false;
+  };
 
   const storeOrder = () => {
     addOrder({ ...food, quantity: 1 });
@@ -85,9 +92,13 @@ const FoodCard = ({ food }: Props) => {
           <small>{formatFoodName(food.name)}</small>
           <small>${food.price}</small>
         </div>
-        <button onClick={(e: SyntheticEvent) => addToCart(e)}>
-          <PlusCircle size={18} /> ADD TO CART
-        </button>
+        {checkOrderExistence(food.id) ? (
+          <button disabled> ALREADY ADDED </button>
+        ) : (
+          <button onClick={(e: SyntheticEvent) => addToCart(e)}>
+            <PlusCircle size={18} /> ADD TO CART
+          </button>
+        )}
       </div>
     </div>
   );

@@ -59,6 +59,10 @@
           justify-content: center;
           gap: 5px;
         }
+
+        .category {
+          color: orange;
+        }
       }
 
       .food-price {
@@ -71,12 +75,11 @@
         }
       }
 
-      button {
-        @include buttonStyle(5px, 5px, 5px);
-        width: 100%;
-        font-size: 0.75rem;
-        font-weight: 700;
-        background-color: $blueNight;
+      .total-orders {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
       }
     }
   }
